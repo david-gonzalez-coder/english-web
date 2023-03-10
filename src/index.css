@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .card{
+    @apply flex justify-center items-center 
+    rounded-3xl bg-[#FDFEFE] p-4 sm:p-8
+  }
+  .highlighted{
+    @apply font-semibold
+  }
+  .card-effect{
+    @apply transition-all hover:-translate-y-2 hover:-translate-x-1 hover:shadow-sm hover:cursor-pointer
+  }
+  .content-container{
+    grid-area: content;
+    @apply p-8 text-[#323236] w-full max-w-screen-lg m-auto 
+    flex flex-col gap-14 
+  }
+  .general-grid{
+    @apply grid grid-cols-8  gap-4 auto-rows-layout  w-full
+  }
+  .title{
+    @apply text-4xl  font-black text-center 
+  }
+  .sub-title{
+    @apply text-2xl  mx-3 font-semibold text-center
+  }
+}
+p:last-child{
+  margin-bottom: 0;
+}
+p, img{
+
+  margin-bottom: 20px;
+}
+
+*::selection {
+
+  background-color: #e1d8cf;
+  color: #683c11;
+ 
+
+}
+h1 ~ p,
+h2 ~ p,
+h3 ~ p,
+h4 ~ p,
+h5 ~ p,
+h6 ~ p,
+h1 ~ div,
+h2 ~ div,
+h3 ~ div,
+h4 ~ div,
+h5 ~ div,
+h6 ~ div{
+  margin-top: 20px;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background: #F4F6FA;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+}
+.neo{
+  /* border-radius: 20px; */
+  /* background: #F4F6FA; */
+  box-shadow:  6px 6px 8px #dee0e4,
+              -6px -6px 8px #ffffff;
+              /* border-radius: 20px;
+background: #F4F6FA;
+box-shadow:  8px 8px 18px #cfd1d5,
+             -8px -8px 18px #ffffff; */
+}
+body::-webkit-scrollbar{
+  display: none;
+}
